@@ -1,0 +1,37 @@
+FONTLOG for Panj Type
+----------------------
+
+This file provides detailed information on the Panj Type font software.
+This information should be distributed along with the Panj Type fonts
+and any derivative works.
+
+Basic Font Information
+----------------------
+
+Panj Type is a family of original Gurmukhi (Punjabi) typefaces. Each
+face occupies the same *role* as a well-known Latin category (neo-grotesque
+sans, transitional serif, humanist sans, geometric sans, monospace, rounded
+sans, condensed display) but is a new design. It does not copy the outlines
+of Helvetica, Arial, Times New Roman, or any other proprietary font.
+
+Reserved Font Names: Nankana Grotesk, Harmandir Serif, Anandpur Sans,
+Chandigarh Geo, Ludhiana Mono, Amritsar Rounded, Patiala Compact.
+
+Coverage: every assigned code point in Unicode Gurmukhi (U+0A00–U+0A7F),
+plus a companion Basic Latin set, danda/double danda, and ZWJ/ZWNJ.
+OpenType GPOS `mark` and `mkmk` position combining signs. HarfBuzz's
+Gurmukhi shaper reorders sihari (U+0A3F).
+
+ChangeLog
+---------
+
+30 October 2026 (Panj Type)
+- First public release under the SIL Open Font License 1.1
+- 7 families, 13 TTF files (Regular + Bold except Patiala Compact)
+- Parametric sources in Python (fontTools)
+
+Acknowledgements
+----------------
+
+Noto Sans Gurmukhi was used only as a visual reference for traditional
+letter skeletons while drawing original outlines.
