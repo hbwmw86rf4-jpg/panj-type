@@ -6,6 +6,8 @@ Seven original families that fill the same *roles* as well-known Latin fonts. Th
 
 **License:** [SIL Open Font License 1.1](OFL.txt) — free to use, study, embed, modify, and redistribute.
 
+**1.1** redraws the letters from traditional Gurmukhi painti skeletons (joining headlines, distinct aira, nana, lalla, sassa, kakka, ura) after the first cut read too much like Devanagari.
+
 ![The same Punjabi line set in all seven Panj Type families](documentation/specimens/comparison.png)
 
 ## Families
@@ -55,7 +57,7 @@ python3 sources/specimen.py
 
 ## Honest limits
 
-These are first-generation parametric fonts. Letter constructions follow traditional Gurmukhi skeletons (headline, right stem, bowls, hanging loops), but they are not a substitute for a foundry family such as Noto Sans Gurmukhi after years of hinting, kerning, and conjunct work. Proof the letters you actually ship before replacing a production font.
+These are first-generation parametric fonts. Version 1.1 draws each letter from the traditional Gurmukhi painti so a line of Punjabi should read as Gurmukhi, not as Devanagari. They are still not a substitute for a foundry family such as Noto Sans Gurmukhi after years of hinting, kerning, and conjunct work. Proof the letters you actually ship before replacing a production font.
 
 Do not copy outlines from proprietary Latin fonts into this project.
 

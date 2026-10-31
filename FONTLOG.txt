@@ -25,6 +25,14 @@ Gurmukhi shaper reorders sihari (U+0A3F).
 ChangeLog
 ---------
 
+31 October 2026 (Panj Type)
+- Redrew every Gurmukhi letter from traditional painti skeletons
+  (headline, right stem, J-hook sa, horseshoe na, n-wave aira, theta ura,
+  two-loop la, 2-shape ka). The first cut used generic Indic bowls and
+  read as Devanagari.
+- Headlines now span the full advance so letters join in a word
+- ccmp decomposes kanaura (ੌ) to hora + kanna
+
 30 October 2026 (Panj Type)
 - First public release under the SIL Open Font License 1.1
 - 7 families, 13 TTF files (Regular + Bold except Patiala Compact)

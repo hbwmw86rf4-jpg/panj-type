@@ -45,6 +45,28 @@ def _q(p: Pt) -> Pt:
     return (round(p[0], 2), round(p[1], 2))
 
 
+def bezier_points(p0: Pt, p1: Pt, p2: Pt, p3: Pt, n: int = 18) -> list[Pt]:
+    pts: list[Pt] = []
+    for i in range(n + 1):
+        t = i / n
+        u = 1.0 - t
+        x = u**3 * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t**3 * p3[0]
+        y = u**3 * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t**3 * p3[1]
+        pts.append((x, y))
+    return pts
+
+
+def quad_points(p0: Pt, p1: Pt, p2: Pt, n: int = 12) -> list[Pt]:
+    pts: list[Pt] = []
+    for i in range(n + 1):
+        t = i / n
+        u = 1.0 - t
+        x = u * u * p0[0] + 2 * u * t * p1[0] + t * t * p2[0]
+        y = u * u * p0[1] + 2 * u * t * p1[1] + t * t * p2[1]
+        pts.append((x, y))
+    return pts
+
+
 def signed_area(pts: Sequence[Pt]) -> float:
     a = 0.0
     n = len(pts)
@@ -244,6 +266,12 @@ class Outline:
 
     def arc(self, cx: float, cy: float, rx: float, ry: float, a0: float, a1: float, t: float | None = None, cap: str | None = None) -> None:
         self.stroke(arc_points(cx, cy, rx, ry, a0, a1), t=t, cap=cap)
+
+    def curve(self, p0: Pt, p1: Pt, p2: Pt, p3: Pt, t: float | None = None, cap: str | None = None, n: int = 18) -> None:
+        self.stroke(bezier_points(p0, p1, p2, p3, n=n), t=t, cap=cap)
+
+    def path(self, pts: Sequence[Pt], t: float | None = None, cap: str | None = None) -> None:
+        self.stroke(pts, t=t, cap=cap)
 
     def teardrop(self, cx: float, cy: float, r: float, pointing: str = "down") -> None:
         """Round blob terminal. A disc unions cleanly with stems."""

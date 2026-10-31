@@ -70,6 +70,10 @@ def fea_text(glyphs: list[GlyphOut]) -> str:
         "  pos mark @ABOVE <anchor 0 40> mark @ABOVE;",
         "  pos mark @BELOW <anchor 0 -40> mark @BELOW;",
         "} mkmk;",
+        "",
+        "feature ccmp {",
+        "  sub uni0A4C by uni0A4B uni0A3E;",
+        "} ccmp;",
     ]
     return "\n".join(lines) + "\n"
 
